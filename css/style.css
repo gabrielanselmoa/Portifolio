@@ -6,306 +6,390 @@
 }
 
 body{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    color: #fff;
 }
 
+span{
+    color: #E09145;
+}
+
+/* BACKGROUND */
 .background{
-    background: url(../images/img-5.png) no-repeat center, #000;
-    border-bottom: 2px solid #151515f3;
+    background: url(../images/banner-n2.jpg) no-repeat center/cover;
     width: 100vw;
     height: 100vh;
 }
 
+/* NAVBAR MENU */
 .nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 2rem 4rem;
-    /* position: sticky;
-    top: 0%; */
+    justify-content: space-around;
+    padding-top: 1.5rem;
 }
 
 .nav h2{
     text-transform: capitalize;
-    font-size: 25px;
-    color: #fff;
-    letter-spacing: 2px;
-    transition: all 0.5s;
-}
-
-.nav h2:hover{
-    transform: translateY(10px);
-}
-
-span{
-    color: #c3073f;
-}
-
-span:hover{
-    color: yellow;
-    transition: all 0.5s linear;
+    letter-spacing: 1px;
 }
 
 .nav ul li{
     list-style-type: none;
     display: inline;
+    padding: 1rem;
+    letter-spacing: 1px;
 }
 
-.nav a{
+.nav ul li a{
     text-decoration: none;
-    margin: 0 0.5rem;
     color: #fff;
-    font-size: 1rem;
     transition: all 0.5s;
+    padding: 1rem;
 }
 
-.nav a:hover{
-    /* color: red; */
-    color: #c3073f;
+.nav ul li a:hover{
+    color: #E09145;
 }
 
 .btn{
-    font-weight: 600;
-    text-transform: capitalize;
-    background:#c3073f;;
+    background: transparent;
+    border: 2px solid #E09145;
+    color: #E09145;
     border-radius: 1rem;
-    border: transparent;
-    color: #fff;
-    font-size: 1rem;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 600;
     padding: 0.5rem;
-    margin: 0 0.5rem;
     transition: all 0.5s;
 }
 
 .btn:hover{
-    background: #fff;
-    cursor: pointer;
-    color: #c3073f;
-    transform: translateY(10px);
-}
-
-/* 768/16 = 48rem responsive*/
-/* @media (max-width: 48rem){
-    
-    .background{
-        background: rgba(255, 0, 0, 0.236);
-    }
-    
-    .nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: right;
-    }
-
-    .nav a{
-        text-decoration: none;
-        margin: 0 0.5rem;
-        color: #fff;
-        font-size: 1rem;
-        transition: all 0.5s;
-    }
-} */
-
-/* NavBar */
-
-.hero{
-    padding: 8rem 4rem;
     color: #fff;
+    background: #E09145;
+    transform: scale(1.2);
 }
 
-.hero p{
-    margin-bottom: 1rem;
-    letter-spacing: 1px;
+/* LOGO - HERO SECTION */
+.logo{
+    text-align: center;
+    margin: 12rem auto;
 }
 
-.hero h1{
+.logo img{
+    width: 200px;
+    border: 4px solid #fff;
+    padding: 0.2rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.logo img:hover{
+    transform: translateY(-15px);
+    border: 4px solid #E09145;
+}
+
+.logo h2{
     text-transform: capitalize;
-    letter-spacing: 1px;
-    margin-bottom: 1rem;
-    font-size: 50px;
+    margin: 1rem 0;
 }
 
-.hero h4{
-    word-spacing: 4px;
+.logo p{
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.675);
+}
+
+/* RESPONSIVE - MEDIA QUERY */
+@media (max-width: 500px){
+
+    .nav{
+       display: flex; 
+       flex-direction: column;
+       justify-content: start;
+    }
+
+    .nav h2{
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .nav ul li{
+        padding: 0.5rem;
+        display: block;
+    }
+
+    .nav ul li a{
+        margin-bottom: 0.5rem;
+    }
+
+    header .btn{
+        width: 150px;
+        margin-top: 0.5rem;
+        margin-left: 1.5rem;
+    }
+
+    /* Logo sub-section */
+    .logo{
+        text-align: center;
+        margin: 3rem auto;
+    }
+}
+
+/* ABOUT ME SECTION */
+
+section{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 70vh;
+}
+
+section img{
+    width: 600px;
+}
+
+.about-me{
+    width: 70%;
+    background: #0A0D12;
+    padding-top: 5rem;
+    padding-left: 4rem;
+    font-weight: 400;
+}
+
+.about-me h2{
+    margin-bottom: 0.3rem;
     letter-spacing: 1px;
+    font-weight: 400;
+}
+
+.underline{
+    width: 90px;
+    height: 2px;
+    background: #E09145;
+    border-radius: 1rem;
+    margin-left: 0.6rem;
     margin-bottom: 2rem;
-    text-transform: capitalize;
+}
+
+.about-me p{
+    line-height: 1.5rem;
+    margin-bottom: 2rem;
+    max-width: 28em;
     font-size: 18px;
 }
 
+/* ANIMATION BAR - BALL */
+
 #under-bar{
-    width: 250px;
-    height: 30px;
-    background: #fff;
+    width: 200px;
+    height: 35px;
+    border: 2px solid #E09145;
     border-radius: 1rem;
+    transition: all 0.5s;
+}
+
+#under-bar:hover{
+    background: #E09145;
+    border: 2px solid #fff;
 }
 
 #ball{
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    background:#c3073f;;
+    background:#E09145;
     animation-name: move;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-iteration-count: infinite;
     transition: all 0.5s linear;
 }
 
+#ball:hover{
+    background: #fff;
+}
+
 @keyframes move{
     0%{
-        transform: translateX(220px);
+        transform: translateX(170px);
     }
 
     75%{
         transform: translateX(-2px);
-        background: #000;
+        /* background: #000; */
     }
 
     100%{
-        transform: translateX(220px);
+        transform: translateX(170px);
     }
 }
 
-/* ABOUT ME SECTION */
+/* RESPONSIVE - MEDIA QUERY */
+@media (max-width: 500px){
 
-.about-me{
-    /* background: linear-gradient(#850505, #850505); */
-    /* border-bottom: 2px solid rgba(70, 3, 3, 0.314); */
-    background: #1a1a1d;
-    border-bottom: 2px solid #151515f3;
-    width: 100vw;
-    height: 90vh;
-    padding-top: 7.5%;
-    padding-left: 50%;
-    color: #fff;
-}
+    section{
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        height: 160vh;
+    }
+    
+    section img{
+        width: 100vw;
+        height: 100vh;
+    }
 
-.about-me h1{
-    font-size: 3.5rem;
-    text-transform: capitalize;
-    padding-bottom: 1rem; 
-}
+    .about-me{
+        width: 100vw;
+        height: 200vh;
+        background: #0A0D12;
+        padding-top: 5rem;
+        padding-left: 4rem;
+        font-weight: 400;
+    }
 
-.about-me h3{
-    font-size: 25px;
-    text-transform: capitalize;
-    padding-bottom: 1rem; 
-}
-
-.about-me p{
-    max-width: 35em;
-    line-height: 1.5rem;
-    padding-bottom: 2rem;
-    color: rgb(241, 234, 241);
-}
-
-.about-me .btn{
-    margin-left: 1px;
-}
-
-.about-me .btn:hover{
-    transform: scale(1.2);
+    .about-me p{
+        line-height: 1.8rem;
+        margin-bottom: 2rem;
+        max-width: 20em;
+        font-size: 18px;
+    }
 }
 
 /* SERVICES SECTION */
 .services{
-    /* background: linear-gradient(#850505, rgb(1, 0, 0)); */
-    background: #000;
-    border-bottom: 2px solid #151515f3;
+    background: #07080C;
     width: 100vw;
-    height: 100vh;
-    padding: 8rem 0;
-    text-align: center;
+    height: 90vh;
+    border-bottom: 2px solid #151515f3;
 }
 
-.services h1{
-    margin-bottom: 5rem;
-    font-size: 4rem;
+.services h2{
+    margin-bottom: 0.3rem;
+    padding: 4rem 0 0.1rem 11rem;
+    letter-spacing: 1px;
     text-transform: capitalize;
-    color: #fff;
+    font-weight: 400;
+}
+
+.services .underline{
+    margin-left: 12rem;
+    width: 110px;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 8rem;
 }
 
 .card{
-    display: inline-block;
-    align-items: center;
-    border-radius: 5%;
-    /* background: linear-gradient(#fff, rgb(180, 116, 116), rgb(60, 3, 3));; */
-    background: #1a1a1d;
-    color: #fff;
-    width: 280px;
-    height: 310px;
-    margin: 0 0.5rem;
+    width: 260px;
+    height: 320px;
+    border: 5px solid #E09145;
+    border-radius: 2%;
+    padding: 2rem;
+    text-align: center;
+    margin: 0 2rem;
     transition: all 0.5s;
 }
 
 .card:hover{
-    transform: translateY(-10px);
-}
-
-.card ion-icon{
-    padding-top: 1rem;
-    font-size: 2.3rem;
+    transform: translateY(-15px);
 }
 
 .card h3{
-    padding-top: 1rem;
+    margin-bottom: 1.5rem;
     text-transform: capitalize;
-    font-size: 1.5rem;
 }
 
 .card p{
-    padding-top: 1.2rem;
-    max-width: 18em;
-    margin: 0 auto;
+    line-height: 1.2rem;
+    margin-bottom: 2rem;
 }
 
-.card .btn{
-    margin-top: 1.4rem;
+
+/* RESPONSIVE - MEDIA QUERY */
+@media (max-width: 500px){
+
+    .services{
+        width: 100vw;
+        height: 170vh;
+    }
+
+    .services h2{
+        padding: 3rem 0 0.1rem 11rem;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 3rem;
+    }
+
+    .card{
+        margin-bottom: 3rem;
+    }
+
+    .card:hover{
+        transform: scale(1.1);
+    }
 }
 
-.card .btn:hover{
-    transform: scale(1.2);
-}
 
 /* CONTACT-ME SECTION */
-
 .contact-me{
     width: 100vw;
-    height: 30vh;
-    background: #1a1a1d;
+    height: 20vh;
+    background: #07080C;
     border-bottom: 2px solid #151515f3;
     color: #fff;
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 2.5rem;
 }
 
 .contact-me p{
-    line-height: 1.5rem;
-    font-size: 30px;
     padding-bottom: 2rem;
     margin: 0 auto;
-    max-width: 50em;
 }
 
-.contact-me .btn:hover{
-    transform: scale(1.2);
+.contact-me .btn{
+    padding: 0.5rem 1.5rem;
+}
+
+/* RESPONSIVE - MEDIA QUERY */
+@media (max-width: 500px){
+
+    .contact-me{
+        width: 100vw;
+        height: 25vh;
+        background: #07080C;
+        border-bottom: 2px solid #151515f3;
+        color: #fff;
+        text-align: center;
+        padding: 2.5rem;
+    } 
 }
 
 /* FOOTER SECTION */
-
 footer{
     width: 100vw;
-    height: 30vh;
+    height: 25vh;
     background: #000;
     color: #fff;
     text-align: center;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 footer h3{
     text-transform: capitalize;
-    font-size: 30px;
     padding-bottom: 1rem;
 }
 
@@ -323,15 +407,16 @@ footer p{
 
 .social-medias a{
     background: transparent;
+    border-radius: 1rem;
     color: #fff;
     padding: 0.5rem;
-    padding-bottom: 1rem;
     font-size: 2rem;
     transition: all 0.5s;
 }
 
 .social-medias a:hover{
     transform: scale(1.2);
+
 }
 
 #linkedin{
@@ -340,4 +425,19 @@ footer p{
 
 #instagram{
     color: rgb(114, 8, 153);
+}
+
+/* RESPONSIVE - MEDIA QUERY */
+@media (max-width: 500px){
+
+
+    footer{
+        width: 100vw;
+        height: 30vh;
+        background: #000;
+        color: #fff;
+        text-align: center;
+        padding: 2rem;
+    }
+
 }
