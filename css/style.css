@@ -736,6 +736,21 @@ section img{
 }
 
 /* RESPONSIVE - MEDIA QUERY */
+@media (390px < width < 480px){
+
+    .services h2{
+        padding: 3rem 0 0.1rem 8rem;
+        letter-spacing: 1px;
+        text-transform: capitalize;
+        font-weight: 400;
+    }
+    .services .underline{
+        margin-left: 9rem;
+        width: 110px;
+    }
+}
+
+/* RESPONSIVE - MEDIA QUERY */
 @media (max-width: 390px){
 
     .services h2{
